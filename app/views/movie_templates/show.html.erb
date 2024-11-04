@@ -12,12 +12,16 @@
   <a href = "/delete_movie/<%= @the_movie.id %>">Delete movie</a>
 </div>
 
+
 <hr>
+
 <form action="/modify_movie_record/<%= @the_movie.id %>" method="post">
-<div>
-  <label for="title_field">Title</label>
-  <input id="title_field" type="text" name="the_title" value="<%= @the_movie.title %>">
-</div>
+  <div>
+    <label for="title_field">Title</label>
+    <input id="title_field" type="text" name="the_title" value="<%= @the_movie.title %>">
+  </div>
+
+  
 <div>
   <label for="year_field">Year</label>
   <input id="year_field" type="text" name="the_year" value="<%= @the_movie.year %>">
