@@ -15,7 +15,6 @@ class DirectorsController < ApplicationController
     the_director.save
 
     redirect_to("/directors/#{the_director.id}")
-  
   end
 
   def create
