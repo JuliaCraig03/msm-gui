@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-
   def update
     m_id = params.fetch("the_id")
 
