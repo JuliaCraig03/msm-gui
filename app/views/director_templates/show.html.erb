@@ -6,8 +6,12 @@
   Go back
 </a>
 
+<div>
+  <a href = "/delete_director/<%= @the_director.id %>">Delete actor</a>
+</div>
+
 <hr>
-<form action="/insert_director_record" method="post">
+<form action="/modify_director_record/<%= @the_director.id %>" method="post">
 <div>
   <label for="name_field">Name</label>
   <input id="name_field" type="text" name="the_name">
@@ -58,7 +62,7 @@
     Image
   </dt>
   <dd>
-    <img src="<%= @the_director.image %>" style="width:250px;">
+    <img src=" <%= @the_director.image %>" style="width:250px;">
   </dd>
 
   <dt>
