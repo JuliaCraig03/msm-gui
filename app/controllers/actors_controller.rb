@@ -5,12 +5,10 @@ class ActorsController < ApplicationController
     matching_records = Actor.where({ :id => a_id})
     the_actor = matching_records.at(0)
 
-    the_actor.title = params.fetch("the_title")
-    the_actor.year = params.fetch("the_year")
-    the_actor.duration = params.fetch("the_duration")
-    the_actor.description = params.fetch("the_description")
+    the_actor.name = params.fetch("the_name")
+    the_actor.dob = params.fetch("the_dob")
+    the_actor.bio = params.fetch("the_bio")
     the_actor.image = params.fetch("the_image")
-    the_actor.id = params.fetch("the_actor_id")
 
     the_actor.save
 
@@ -20,12 +18,10 @@ class ActorsController < ApplicationController
   def create
     a = Actor.new
     
-    a.title = params.fetch("the_title")
-    a.year = params.fetch("the_year")
-    a.duration = params.fetch("the_duration")
-    a.description = params.fetch("the_description")
+    a.name = params.fetch("the_name")
+    a.dob = params.fetch("the_dob")
+    a.bio = params.fetch("the_bio")
     a.image = params.fetch("the_image")
-    a.director_id = params.fetch("the_actor_id")
 
     a.save
 
